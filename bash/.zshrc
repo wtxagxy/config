@@ -113,3 +113,5 @@ export FZF_COMPLETION_TRIGGER='**'
 export FZF_DEFAULT_COMMAND="fd --exclude={.git,.idea,.vscode,.sass-cache,node_modules,build} --type f"
 export FZF_DEFAULT_OPTS="--height 60% --layout=reverse --preview '(highlight -O ansi {} || cat {}) 2> /dev/null | head -500 | bat --style=numbers --color=always --line-range :500 {}'"
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

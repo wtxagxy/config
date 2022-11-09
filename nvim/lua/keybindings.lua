@@ -126,7 +126,7 @@ noremap('i','<lt>D-s>', '<esc>:w<CR>a', true)
 -- 注释
 map('n','<lt>D-/>', 'gcc', true)
 map('v','<lt>D-/>', 'gcc<Esc>', true)
-map('i','<lt>D-/>', '<Esc>gcc:a', true)
+map('i','<lt>D-/>', '<Esc>gcc', true)
 
 --[[
     ==========================================================
