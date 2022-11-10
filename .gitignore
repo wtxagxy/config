@@ -1,5 +1,7 @@
-# 这是忽略文件
+# 忽略所有文件
 /*
+
+#跟踪一下文件
 !.gitignore
 !/iterm2
 !/lazygit
@@ -7,3 +9,6 @@
 !/ranger
 !/bash
 !/bat
+
+#忽略一下文件
+/nvim/plugin/packer_compiled.lua
