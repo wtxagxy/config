@@ -87,4 +87,7 @@ return packer.startup(function()
 
     -- floaterm 浮动终端
     use 'voldikss/vim-floaterm'
+
+    -- fzf plugins
+    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 end)
