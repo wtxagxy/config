@@ -15,9 +15,8 @@ lua require('plugin-config/telescope')
 lua require('plugin-config/nvim-treesitter')
 lua require('plugin-config/nvim-lualine')
 lua require('plugin-config/indent-blankline')
-lua require('plugin-config/neogen')
 lua require('keybindings')
-"lua require('lsp/setup')
+" lua require('lsp/setup')
 
 " 皮肤设置
 " https://github.com/ellisonleao/gruvbox.nvim

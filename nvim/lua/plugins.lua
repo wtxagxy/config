@@ -51,21 +51,6 @@ return packer.startup(function()
         end
     }
 
-    -- 方法注释插件
-    use {
-        "danymat/neogen",
-        config = function()
-            local neogen = require('neogen')
-            neogen.setup({})
-            neogen.generate({
-                type = "func" -- the annotation type to generate. Currently supported: func, class, type, file
-            }) 
-        end,
-        requires = "nvim-treesitter/nvim-treesitter",
-        -- Uncomment next line if you want to follow only stable versions
-        -- tag = "*"
-    }
-
     -- 注释插件
     use {
         'numToStr/Comment.nvim',
