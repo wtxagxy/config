@@ -7,7 +7,7 @@ packer.init({
     }
 })
 
-return packer.startup(function()
+return packer.startup(function(use)
     -- packer 插件管理器can manage itself
     use 'wbthomason/packer.nvim'
 
@@ -31,7 +31,7 @@ return packer.startup(function()
     use 'nvim-tree/nvim-web-devicons'
 
     -- bufferline
-    use {'akinsho/bufferline.nvim'}
+    use {'akinsho/bufferline.nvim', tag = 'v3.*'}
 
     -- treesitter 语法高亮
     use { 'nvim-treesitter/nvim-treesitter', branch = 'v0.8.0', run = ':TSUpdate' }
@@ -55,6 +55,7 @@ return packer.startup(function()
     use {
         'numToStr/Comment.nvim',
     }
+
     -- lualine 状态栏
     use {
         'nvim-lualine/lualine.nvim',

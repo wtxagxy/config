@@ -5,6 +5,8 @@
 " 识别后缀名 .lua.txt 
 au! BufNewFile,BufRead *.lua.txt setf lua
 
+lua require('global')
+lua require('util')
 lua require('basic') 
 lua require('plugins')
 lua require('plugin-config/nvim-tree')

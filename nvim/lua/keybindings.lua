@@ -128,6 +128,8 @@ map('n','<lt>D-/>', 'gcc', true)
 map('v','<lt>D-/>', 'gcc<Esc>', true)
 map('i','<lt>D-/>', '<Esc>gcc', true)
 
+noremap('n', '<c-w>', [[<cmd>lua wangtx.close_current_buffer()<cr>]])
+
 --[[
     ==========================================================
     =                 插件相关                               =
