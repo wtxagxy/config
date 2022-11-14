@@ -5,19 +5,18 @@
 " 识别后缀名 .lua.txt 
 au! BufNewFile,BufRead *.lua.txt setf lua
 
-lua require('global')
-lua require('util')
-lua require('basic') 
-lua require('plugins')
-lua require('plugin-config/nvim-tree')
-lua require('plugin-config/nvim-web-devicons')
-lua require('plugin-config/bufferline')
-lua require('plugin-config/comment')
-lua require('plugin-config/telescope')
-lua require('plugin-config/nvim-treesitter')
-lua require('plugin-config/nvim-lualine')
-lua require('plugin-config/indent-blankline')
-lua require('keybindings')
+lua require('core')
+lua require('core/basic') 
+lua require('core/plugins')
+lua require('configs/nvim-tree')
+lua require('configs/nvim-web-devicons')
+lua require('configs/bufferline')
+lua require('configs/comment')
+lua require('configs/telescope')
+lua require('configs/nvim-treesitter')
+lua require('configs/nvim-lualine')
+lua require('configs/indent-blankline')
+lua require('core/keybindings')
 " lua require('lsp/setup')
 
 " 皮肤设置
@@ -68,10 +67,6 @@ endfunction
 
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-/> coc#refresh()
-
-" Use <Ctrl-F> to format documents with prettier
-command! -nargs=0 Prettier :CocCommand prettier.formatFile
-noremap <C-F> :Prettier<CR>
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)

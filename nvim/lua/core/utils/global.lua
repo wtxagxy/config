@@ -1,5 +1,19 @@
+-- 全局模块
+_G.wangtx = {}
+
 local cmd = vim.cmd
 local fn = vim.fn
+
+--[[
+    设置
+]]
+function wangtx.vim_opts(options)
+  for scope, table in pairs(options) do
+    for setting, value in pairs(table) do
+      vim[scope][setting] = value
+    end
+  end
+end
 
 --[[
     关闭当前buffer

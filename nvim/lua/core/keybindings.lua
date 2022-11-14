@@ -124,8 +124,8 @@ noremap('v','<lt>D-s>', '<esc>:w<CR>gv', true)
 noremap('i','<lt>D-s>', '<esc>:w<CR>a', true)
 
 -- 注释
-map('n','<lt>D-/>', 'gcc', true)
-map('v','<lt>D-/>', 'gcc<Esc>', true)
+map('n','<lt>d-/>', 'gcc', true)
+map('v','<lt>d-/>', 'gcc<esc>', true)
 map('i','<lt>D-/>', '<Esc>gcc', true)
 
 noremap('n', '<c-w>', [[<cmd>lua wangtx.close_current_buffer()<cr>]])
@@ -136,9 +136,9 @@ noremap('n', '<c-w>', [[<cmd>lua wangtx.close_current_buffer()<cr>]])
     ==========================================================
 ]]
 -- NvimTree 目录管理
-noremap('n', '<c-b>', ':NvimTreeToggle<CR>', true)
-noremap('n', '<c-9>', ':BufferLineCyclePrev<CR>', true)
-noremap('n', '<c-0>', ':BufferLineCycleNext<CR>', true)
+noremap('n', '<leader>e', ':NvimTreeToggle<CR>', true)
+noremap('n', '<s-H>', ':BufferLineCyclePrev<CR>', true)
+noremap('n', '<s-L>', ':BufferLineCycleNext<CR>', true)
 noremap('n', '<leader>bc', ':BufferLinePickClose<CR>', true)
 noremap('n', '<leader>bc', ':BufferLinePick<CR>', true)
 

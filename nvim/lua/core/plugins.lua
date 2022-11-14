@@ -1,5 +1,6 @@
 local packer = require("packer")
 packer.init({
+    compile_path = astronvim.default_compile_path,
     display = {
         open_fn = function()
             return require('packer.util').float { border = 'rounded' }

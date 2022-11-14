@@ -126,7 +126,7 @@ if present then
             unmerged = '',
             renamed = '➜',
             deleted = '',
-            untracked = 'u',
+            untracked = '?',
             ignored = '◌',
           },
           folder = {
