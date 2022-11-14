@@ -124,9 +124,9 @@ noremap('v','<lt>D-s>', '<esc>:w<CR>gv', true)
 noremap('i','<lt>D-s>', '<esc>:w<CR>a', true)
 
 -- 注释
-map('n','<lt>d-/>', 'gcc', true)
-map('v','<lt>d-/>', 'gcc<esc>', true)
-map('i','<lt>D-/>', '<Esc>gcc', true)
+map('n','<leader>/', 'gcc', true)
+map('v','<leader>/', 'gcc<esc>', true)
+map('i','<leader>/', '<Esc>gcc', true)
 
 noremap('n', '<c-w>', [[<cmd>lua wangtx.close_current_buffer()<cr>]])
 

@@ -1,2 +1,2 @@
-
+require('core/utils/global')
 

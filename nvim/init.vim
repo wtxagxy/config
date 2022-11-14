@@ -5,8 +5,9 @@
 " 识别后缀名 .lua.txt 
 au! BufNewFile,BufRead *.lua.txt setf lua
 
-lua require('core')
-lua require('core/basic') 
+lua require('core/utils')
+lua require('core/options')
+lua require('core/cmds')
 lua require('core/plugins')
 lua require('configs/nvim-tree')
 lua require('configs/nvim-web-devicons')
@@ -21,8 +22,8 @@ lua require('core/keybindings')
 
 " 皮肤设置
 " https://github.com/ellisonleao/gruvbox.nvim
-set background=dark
-colorscheme gruvbox
+" set background=light "dark
+" colorscheme gruvbox
 " colorscheme nord
 " colorscheme zephyr
 
@@ -33,11 +34,11 @@ colorscheme gruvbox
 " hiftwidth 表示每一级缩进的长度，一般设置成跟 softtabstop 一样。
 " expandtab表示缩进用空格来表示，noexpandtab 则是用制表符表示一个缩进。
 " autoindent自动缩进
-set ts=4
-set softtabstop=4
-set shiftwidth=4
-set expandtab
-set autoindent
+" set ts=4
+" set softtabstop=4
+" set shiftwidth=4
+" set expandtab
+" set autoindent
 
 " 命令模式c-k
 cnoremap <C-k> <C-\>e(" ".getcmdline())[:getcmdpos()-1][1:]<CR>
@@ -61,8 +62,8 @@ inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 function! CheckBackspace() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
 " Use <c-space> to trigger completion.
