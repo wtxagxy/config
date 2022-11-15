@@ -18,21 +18,21 @@ set autoindent
 ]]
 
 wangtx.vim_opts({
-    -- opt 
+    -- opt
     o = {
         fileencoding = 'utf-8',
         scrolloff = 8,
         sidescrolloff = 8,
         tabstop = 4,                        -- 设TAB宽度为4个空格。
-        softtabstop = 4,                    -- 表示在编辑模式的时候按退格键的时候退回缩进的长度，当使用 expandtab 时特别有用。 
+        softtabstop = 4,                    -- 表示在编辑模式的时候按退格键的时候退回缩进的长度，当使用 expandtab 时特别有用。
         shiftwidth = 4,                     -- 表示每一级缩进的长度，一般设置成跟 softtabstop 一样。
         expandtab = true,                   -- expandtab表示缩进用空格来表示，noexpandtab 则是用制表符表示一个缩进。
         autoindent = true,                  -- 新行缩进对齐当前行
         smartindent = true,                 -- 只能缩进
         ignorecase = true,                  -- 搜索忽略大小写
-        smartcase = true,                   -- 搜索大小写不敏感，除非包含大写 
+        smartcase = true,                   -- 搜索大小写不敏感，除非包含大写
         hlsearch = true,                    -- 搜索开启高亮
-        incsearch = true,                   -- 边输入边搜索 
+        incsearch = true,                   -- 边输入边搜索
         cmdheight = 2,                      -- 命令行高为2
         autoread = true,                    -- 当文件被外部程序修改时
         whichwrap = "<,>,[,]",              -- 光标在行首尾时<Left><Right>可以跳到下一行

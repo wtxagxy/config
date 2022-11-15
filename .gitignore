@@ -9,6 +9,7 @@
 !/ranger
 !/bash
 !/bat
+!/tmux
 
 #忽略一下文件
 /nvim/plugin/packer_compiled.lua
