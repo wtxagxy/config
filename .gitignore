@@ -13,3 +13,4 @@
 
 #忽略一下文件
 /nvim/plugin/packer_compiled.lua
+/lazygit/state.yml
