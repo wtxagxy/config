@@ -27,7 +27,7 @@ wangtx.vim_opts({
         backup = false,                         	-- 禁止创建备份文件
         writebackup = false,                    	-- 禁止写入备份文件
         swapfile = false,                       	-- 禁止创建swapfile
-        timeoutlen = 300,                       	-- 设置 timeoutlen 为等待键盘快捷键连击时间500毫秒，可根据需要设置遇到问题详见：https://github.com/nshen/learn-neovim-lua/issues/1
+        timeoutlen = 0,                       	-- 设置 timeoutlen 为等待键盘快捷键连击时间500毫秒，可根据需要设置遇到问题详见：https://github.com/nshen/learn-neovim-lua/issues/1
         splitbelow = true,                      	-- split window 从下出现
         splitright = true,                      	-- split window 从右边出现
         termguicolors = true,                   	-- 样式
