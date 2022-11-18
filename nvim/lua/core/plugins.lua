@@ -48,7 +48,7 @@ return packer.startup(function(use)
         'goolord/alpha-nvim',
         requires = { 'kyazdani42/nvim-web-devicons' },
         config = function ()
-            require'alpha'.setup(require'alpha.themes.startify'.config)
+            -- require'alpha'.setup(require'alpha.themes.startify'.config)
         end
     }
 
@@ -77,4 +77,8 @@ return packer.startup(function(use)
 
     -- fzf plugins
     use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+
+    -- which-key
+    use {"folke/which-key.nvim"}
+
 end)

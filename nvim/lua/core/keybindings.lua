@@ -66,15 +66,12 @@ local set_noremap = function(mode, beforKey, afterKey, silent)
     nvim_set_keymap(mode, beforKey, afterKey, opt)
 end
 
--- <leader>
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
-
 -- <esc>
 noremap('n', '<esc>', '<esc>', false)
 
 -- jj -> <esc>
 noremap('i', 'jj', '<esc>', true)
+noremap('i', 'jk', '<esc>', true)
 
 -- <c-u> <c-d> 翻页
 noremap('n', '<c-d>', '10jzz', true)
@@ -111,10 +108,6 @@ noremap('c', '<c-b>', '<left>', false)
 -- -- 代码缩进
 noremap('v', '<', '<gv', true)
 noremap('v', '>', '>gv', true)
-noremap('v', '<Tab>','>gv', true)
-noremap('v', '<S-Tab>','<gv', true)
-noremap('n', '<Tab>','V><Esc>', true)
-noremap('n', '<S-Tab>','V<<Esc>', true)
 
 -- 全选
 noremap('n','<lt>D-a>', 'ggVG', true)
@@ -124,9 +117,9 @@ noremap('v','<lt>D-s>', '<esc>:w<CR>gv', true)
 noremap('i','<lt>D-s>', '<esc>:w<CR>a', true)
 
 -- 注释
-map('n','<leader>/', 'gcc', true)
-map('v','<leader>/', 'gcc<esc>', true)
-map('i','<leader>/', '<Esc>gcc', true)
+map('n','<lt>D-/>', 'gcc', true)
+map('v','<lt>D-/>', 'gcc<esc>', true)
+map('i','<lt>D-/>', '<Esc>gcc', true)
 
 noremap('n', '<c-w>', [[<cmd>lua wangtx.close_current_buffer()<cr>]])
 
@@ -136,7 +129,7 @@ noremap('n', '<c-w>', [[<cmd>lua wangtx.close_current_buffer()<cr>]])
     ==========================================================
 ]]
 -- NvimTree 目录管理
-noremap('n', '<leader>e', ':NvimTreeToggle<CR>', true)
+-- noremap('n', '<leader>e', ':NvimTreeToggle<CR>', true)
 noremap('n', '<s-H>', ':BufferLineCyclePrev<CR>', true)
 noremap('n', '<s-L>', ':BufferLineCycleNext<CR>', true)
 noremap('n', '<leader>bc', ':BufferLinePickClose<CR>', true)
@@ -157,7 +150,9 @@ noremap('n', '<leader>tt', ':FloatermNew<CR>', true)
 noremap('n', '<leader>tf', ':FloatermNew fzf<CR>', true)
 noremap('n', '<leader>tl', ':FloatermNew lazygit<CR>', true)
 noremap('n', '<leader>tr', ':FloatermNew ranger<CR>', true)
-noremap('t', '<leader>th', '<c-\\><c-n>:FloatermHide<CR>', true)
+-- noremap('t', '<leader>th', '<c-\\><c-n>:FloatermHide<CR>', true)
 noremap('n', '<leader>ts', ':FloatermShow<CR>', true)
-noremap('t', '<leader>tp', '<c-\\><c-n>:FloatermPrev<CR>', true)
-noremap('t', '<leader>tn', '<c-\\><c-n>:FloatermNext<CR>', true)
+noremap('n', '<leader>th', ':FloatermHide<CR>', true)
+noremap('n', '<leader>tp', ':FloatermPrev<CR>', true)
+noremap('n', '<leader>tn', ':FloatermNext<CR>', true)
+noremap('t', '<esc>', '<c-\\><c-n>', true)

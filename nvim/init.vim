@@ -4,6 +4,10 @@
 
 " 识别后缀名 .lua.txt 
 au! BufNewFile,BufRead *.lua.txt setf lua
+" 进入Insert 模式 设置连击按键时间 
+autocmd InsertEnter * set timeoutlen=200
+" 离开 Insert 模式 设置连击按键时间 
+autocmd InsertLeave * set timeoutlen=0
 
 lua require('core/utils')
 lua require('core/options')
@@ -17,6 +21,7 @@ lua require('configs/telescope')
 lua require('configs/nvim-treesitter')
 lua require('configs/nvim-lualine')
 lua require('configs/indent-blankline')
+lua require('configs/which-key')
 lua require('core/keybindings')
 " lua require('lsp/setup')
 
