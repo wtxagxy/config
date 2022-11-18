@@ -4,14 +4,11 @@
 
 " 识别后缀名 .lua.txt 
 au! BufNewFile,BufRead *.lua.txt setf lua
-" 进入Insert 模式 设置连击按键时间 
-autocmd InsertEnter * set timeoutlen=200
-" 离开 Insert 模式 设置连击按键时间 
-autocmd InsertLeave * set timeoutlen=0
 
 lua require('core/utils')
 lua require('core/options')
 lua require('core/cmds')
+lua require('core/autocmds')
 lua require('core/plugins')
 lua require('configs/nvim-tree')
 lua require('configs/nvim-web-devicons')
