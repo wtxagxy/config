@@ -341,6 +341,7 @@ tmux_conf_copy_to_os_clipboard=false
 
 # start with mouse mode enabled
 set -g mouse on
+set-option -g mouse on
 
 # force Vi mode
 #   really you should export VISUAL or EDITOR environment variable, see manual
@@ -410,10 +411,15 @@ set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-continuum'
 
 set -g @continuum-restore 'on' # 打开tmux时自动恢复上一个保存的sessions记录
-set -g @continuum-save-interval '60' # 每15分钟保存一次代码 
+set -g @continuum-save-interval '240' # 每15分钟保存一次代码 
 
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run '~/.tmux/plugins/tpm/tpm'
+
+# bind keymap
+set -g prefix C-\\
+bind C-\\ send-prefix
+unbind C-b
 
 # -- custom variables ----------------------------------------------------------
 

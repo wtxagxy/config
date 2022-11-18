@@ -151,8 +151,6 @@ set_noremap('n', '<leader>fh', telBuiltin.help_tags, true)
 set_noremap('n', '<leader>sf', [[<cmd>lua require('telescope.builtin').file_browser()<cr>]], true)
 set_noremap('n', '<leader>so', telBuiltin.current_buffer_fuzzy_find, true)
 
--- neogen
-set_noremap("n", "gcf", ":lua require('neogen').generate({type = \"func\"})<CR>", true)
 
 -- floaterm fzf
 noremap('n', '<leader>tt', ':FloatermNew<CR>', true)
