@@ -23,6 +23,9 @@ local nopts = {
 local nkeybinds = {
     ["/"] = { "<Plug>(comment_toggle_linewise_current)", "Comment toggle current line" },
     ['e'] = {':NvimTreeToggle<CR>', 'NvimTree Toggle123'},
+    ["<leader>"] = {{
+        ["s"] = {":HopChar1<CR>", "Lightspeed f"},
+    }, "lightspeed"}
 }
 
 local vopts = {

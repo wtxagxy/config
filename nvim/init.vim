@@ -19,6 +19,8 @@ lua require('configs/nvim-treesitter')
 lua require('configs/nvim-lualine')
 lua require('configs/indent-blankline')
 lua require('configs/which-key')
+lua require('configs/hop')
+" lua require('configs/lightspeed')
 lua require('core/keybindings')
 " lua require('lsp/setup')
 

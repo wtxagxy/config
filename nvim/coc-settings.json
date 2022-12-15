@@ -8,7 +8,7 @@
     "suggest.snippetIndicator": "",
     "suggest.triggerCompletionWait": 50,
     "suggest.completionItemKindLabels": {
-        "constructor": "\ufb25",
+       "constructor": "\ufb25",
         "keyword": "\uf1de",
         "variable": "\ue79b",
         "value": "\uf89f",
