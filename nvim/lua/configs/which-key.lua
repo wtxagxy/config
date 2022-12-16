@@ -39,6 +39,9 @@ local vopts = {
 
 local vkeybinds = {
     ["/"] = { "<Plug>(comment_toggle_linewise_visual)", "Comment toggle linewise (visual)" },
+    ["<leader>"] = {{
+        ["s"] = {"<cmd>lua require('hop').HopChar1<CR>", "Lightspeed f"},
+    }, "lightspeed"}
 }
 
 which_key.setup(setup)
