@@ -35,7 +35,7 @@ return packer.startup(function(use)
     use {'akinsho/bufferline.nvim', tag = 'v3.*'}
 
     -- treesitter 语法高亮
-    use { 'nvim-treesitter/nvim-treesitter', branch = 'v0.8.0', run = ':TSUpdate' }
+    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
     -- lspconfig
     -- use {'neovim/nvim-lspconfig', 'williamboman/nvim-lsp-installer'}
@@ -66,9 +66,12 @@ return packer.startup(function(use)
 
     -- 文件搜索
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.0', -- or branch = '0.1.x',
+        'nvim-telescope/telescope.nvim', branch = '0.1.x',
         requires = {'nvim-lua/plenary.nvim'}
     }
+
+    -- fzf native
+    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
     -- 缩进回车换行显示
     use "lukas-reineke/indent-blankline.nvim"
@@ -82,8 +85,7 @@ return packer.startup(function(use)
     -- which-key
     use {"folke/which-key.nvim"}
 
-    -- 快速跳转
-    -- use {"ggandor/lightspeed.nvim", requires = {"tpope/vim-repeat"}}
+    -- 快速跳转 字符串 字符
     use {
         'phaazon/hop.nvim',
         branch = 'v2', -- optional but strongly recommended
