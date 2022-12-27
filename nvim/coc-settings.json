@@ -36,5 +36,6 @@
         "default": " "
     },
     "pyright.enable": true,
-    "python.pythonPath": "python3"
+    "python.pythonPath": "python3",
+    "lua.enable": true 
 }
