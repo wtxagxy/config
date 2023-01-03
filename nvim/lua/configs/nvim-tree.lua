@@ -115,7 +115,7 @@ if present then
                     file = true,
                     folder = true,
                     git = true,
-                    folder_arrow = false,
+                    folder_arrow = true,
                 },
                 glyphs = {
                     default = '',
@@ -131,10 +131,10 @@ if present then
                     },
                     -- ﰬﲔﲖﰲﰬ
                     folder = {
-                        default = ' ', -- 
-                        open = ' ', -- 
-                        empty = ' ',
-                        empty_open = ' ', -- 
+                        default = '', -- 
+                        open = '', --  
+                        empty = '',
+                        empty_open = '', -- 
                         symlink = '',
                         symlink_open = '',
                     },

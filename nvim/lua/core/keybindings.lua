@@ -136,13 +136,14 @@ noremap('n', '<leader>bc', ':BufferLinePickClose<CR>', true)
 noremap('n', '<leader>bc', ':BufferLinePick<CR>', true)
 
 -- Telescope 文件符号搜索
+local telescope = require('telescope')
 local telBuiltin = require('telescope.builtin')
 set_noremap('n', '<leader>ff', telBuiltin.find_files, true)
+-- set_noremap('n', '<leader>ff', telescope.extensions.fzf_writer.files, true)
 set_noremap('n', '<leader>fg', telBuiltin.live_grep, true)
 set_noremap('n', '<leader>fb', telBuiltin.buffers, true)
 set_noremap('n', '<leader>fh', telBuiltin.help_tags, true)
-set_noremap('n', '<leader>sf', [[<cmd>lua require('telescope.builtin').file_browser()<cr>]], true)
-set_noremap('n', '<leader>so', telBuiltin.current_buffer_fuzzy_find, true)
+set_noremap('n', '<leader>fm', telBuiltin.current_buffer_fuzzy_find, true)
 
 
 -- floaterm fzf

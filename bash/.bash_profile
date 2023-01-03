@@ -63,3 +63,6 @@ export FrameworkPathOverride=/Library/Frameworks/Mono.framework/Versions/Current
 export PATH="/usr/local/sbin:$PATH"
 
 . "$HOME/.cargo/env"
+
+#lvim
+export PATH=/Users/wangtx/.local/bin:$PATH

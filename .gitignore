@@ -10,7 +10,8 @@
 !/bash
 !/bat
 !/tmux
+!/lvim
 
 #忽略一下文件
-/nvim/plugin/packer_compiled.lua
+packer_compiled.lua
 /lazygit/state.yml

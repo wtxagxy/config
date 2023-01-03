@@ -22,12 +22,19 @@ local nopts = {
 
 local nkeybinds = {
     ["/"] = { "<Plug>(comment_toggle_linewise_current)", "Comment toggle current line" },
+    ["c"] = {"<cmd>lua wangtx.close_current_buffer()<cr>", "Close Buffer"},
     ['e'] = {':NvimTreeToggle<CR>', 'NvimTree Toggle123'},
     ["<leader>"] = {{
         ["s"] = {":HopChar1<CR>", "search world first abc"},
         ["w"] = {":HopWord<CR>", "search world"},
         ["/"] = {":HopPattern<CR>", "search mode"},
-    }, "hop"}
+    }, "hop"},
+    ["p"] = {{
+        ["I"] = {":PackerInstall<CR>", "Packer Install"},
+        ["S"] = {":PackerSync<CR>", "Packer Sync"},
+        ["s"] = {":PackerStatus<CR>", "Packer Status"},
+        ["c"] = {":PackerCompile<CR>", "Packer Compile"},
+    }, "Packer"}
 }
 
 local vopts = {
@@ -49,4 +56,3 @@ local vkeybinds = {
 which_key.setup(setup)
 which_key.register(nkeybinds, nopts)
 which_key.register(vkeybinds, vopts)
-print('which_key')

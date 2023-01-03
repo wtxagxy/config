@@ -8,6 +8,7 @@ packer.init({
     }
 })
 
+-- print('plugins')
 return packer.startup(function(use)
     -- packer 插件管理器can manage itself
     use 'wbthomason/packer.nvim'
@@ -23,7 +24,7 @@ return packer.startup(function(use)
     -- theme zephyr
     use 'glepnir/zephyr-nvim'
 
-    -- nvim-tree
+    -- nvim-tree file Explorer
     use {
         'nvim-tree/nvim-tree.lua',
         tag = 'nightly' -- optional, updated every week. (see issue #1193)
@@ -48,6 +49,7 @@ return packer.startup(function(use)
         'goolord/alpha-nvim',
         -- requires = { 'kyazdani42/nvim-web-devicons' },
         config = function ()
+            -- print("alpha")
             require'alpha'.setup(require'alpha.themes.dashboard'.config)
             -- require'alpha'.setup(require'alpha.themes.startify'.config)
         end
@@ -79,9 +81,6 @@ return packer.startup(function(use)
     -- floaterm 浮动终端
     use 'voldikss/vim-floaterm'
 
-    -- fzf plugins
-    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-
     -- which-key
     use {"folke/which-key.nvim"}
 
@@ -91,7 +90,8 @@ return packer.startup(function(use)
         branch = 'v2', -- optional but strongly recommended
         config = function()
             -- you can configure Hop the way you like here; see :h hop-config
-            require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+            -- print('hop config')
+            require'hop'.setup({ keys = 'etovxqpdygfblzhckisuran' })
         end
     }
 end)
