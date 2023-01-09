@@ -1,0 +1,23 @@
+# 使用方法:
+#           echo "~/.config/tmux/.tmux.conf.my.local" >> ~/.tmux.conf.local
+#   
+# plugins ----------------------------------------------------------------------
+# list of plugin
+set -g @plugin 'tmux-plugins/tmp'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-continuum'
+
+set -g @continuum-restore 'on' # 打开tmux时自动恢复上一个保存的sessions记录
+set -g @continuum-save-interval '240' # 每15分钟保存一次代码 
+
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run '~/.tmux/plugins/tpm/tpm'
+
+# bind keymap
+set -g prefix C-\\
+bind C-\\ send-prefix
+unbind C-b
+
+# -- custom variables ----------------------------------------------------------
+

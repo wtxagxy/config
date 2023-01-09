@@ -42,6 +42,9 @@ export PATH=$TEXTURE_PACKER:$PATH
 export FASTLANE=$HOME/.fastlane/bin
 export PATH=$FASTLANE:$PATH
 
+# python2.7
+export PATH=/Users/wangtx/Documents/developer/library/python2.7/bin:$PATH
+
 # ra nvim
 export EDITOR=nvim
 
@@ -51,6 +54,7 @@ alias git='LANG=en_US.UTF-8 git'
 alias lg='lazygit'
 alias ra='ranger'
 alias vim='nvim'
+
 
 # autoUploadFile
 export LC_API_SERVER=https://avoscloud.com
