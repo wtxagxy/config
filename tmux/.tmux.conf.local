@@ -409,7 +409,9 @@ tmux_conf_uninstall_plugins_on_reload=true
 # set -g @plugin 'tmux-plugjns/tmux-continuum'
 #set -g @continuum-restore 'on'
 
+# session恢复
 set -g @plugin 'tmux-plugins/tmux-resurrect'
+# 定时保存session，打开自动恢复session
 set -g @plugin 'tmux-plugins/tmux-continuum'
 
 set -g @continuum-restore 'on' # 打开tmux时自动恢复上一个保存的sessions记录
@@ -419,6 +421,10 @@ set -g @continuum-save-interval '240' # 每15分钟保存一次代码
 set -g prefix C-\\
 bind C-\\ send-prefix
 unbind C-b
+
+set -gu prefix2
+unbind C-a
+
 
 # -- custom variables ----------------------------------------------------------
 
