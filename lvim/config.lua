@@ -19,6 +19,7 @@ lvim.colorscheme = "lunar" -- "lunar", gruvbox
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
 -- add your own keymappings
+lvim.keys.normal_mode["<enter>"] = "viw"
 lvim.keys.normal_mode["<lt>D-a>"] = "ggVG"
 lvim.keys.normal_mode["<lt>D-s>"] = "<cmd>w!<CR>"
 lvim.keys.insert_mode["<lt>D-s>"] = "<cmd>w!<CR>"
@@ -49,6 +50,14 @@ lvim.keys.command_mode["<c-d>"] = {"<del>",       {noremap = false}}
 lvim.keys.command_mode["<c-h>"] = {"<backspace>", {noremap = false}}
 lvim.keys.command_mode["<c-f>"] = {"<right>",     {noremap = false}}
 lvim.keys.command_mode["<c-b>"] = {"<left>",      {noremap = false}}
+
+-- set left right don't move line
+vim.opt.whichwrap = "<,>,[,]"
+-- tab space count
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+
 
 -- lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 -- lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
@@ -103,6 +112,7 @@ lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 lvim.builtin.treesitter.ensure_installed = {
   "bash",
   "c",
+  "c_sharp",
   "javascript",
   "json",
   "lua",
